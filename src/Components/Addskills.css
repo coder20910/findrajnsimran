@@ -1,0 +1,23 @@
+.skill-row{
+    display:table;
+    /* width: 100%; */
+    table-layout: fixed;
+}
+.skill-col{
+    display: table-cell;
+}
+.skill-col1{
+    display: table-cell;
+    padding-left: 10px;
+}
+
+li{
+    list-style-type: none;
+    border: "none";
+    background: #EDEDED;
+    border-radius: 6px;
+    display: inline-block;
+    /* float: left; */
+    margin: 5px 6px 0 0;
+    padding: 2px 8px;
+}
