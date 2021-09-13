@@ -1,5 +1,79 @@
-.content{
+/* .content{
     height: 10vh;
     width: 35vw;
     border: "1 px solid";
+} */
+.dataContainer{
+    width: 65%;
+}
+.clgName{
+    color: #4A5056;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 9px;
+    margin-bottom: 5px
+}
+.passingYear{
+    color: #8A8A8A;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.info{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    margin: 5px 0;
+    color: #40454A;
+}
+.about{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    padding-bottom: 5px;
+    max-height: 72px;
+}
+.profilePicContainer{
+    padding: 0;
+    width: 15%;
+    align-self: baseline;
+    -webkit-align-self: baseline;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+.dpHelper{
+    background-color: #ffffff4d;
+    border-radius: 6px;
+    height: 70px;
+    width: 70px;
+}
+.interestContainer{
+    text-align: center;
+    padding-left: 15px;
+}
+.interested-button{
+    margin-top: 3.25rem;
+    width: 100px;
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 4px;
+    background-color: #19927A;
+    border-color: #007358;
+    cursor: pointer;
+}
+.interested-button:hover{
+    /* color: #fff; */
+    background-color: #449d44;
+    border-color: #398439;
+}
+.not-interested-button{
+    background: none;
+    border:0;
+    margin-top: 2px;
+}
+.not-interested-button:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }

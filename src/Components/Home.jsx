@@ -3,8 +3,9 @@ import {connect} from "react-redux";
 import {getPostMiddleWare} from "../redux/posts/getPostMiddleWare";
 import Posts from './Posts';
 
+
 function Home(props) {
-    let {fetchPosts} = props;
+    let {fetchPosts} = props;  
     useEffect(() => {
         fetchPosts();
     }, [fetchPosts])

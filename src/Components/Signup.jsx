@@ -1,13 +1,14 @@
-import React, {useState, useContext} from 'react';
-import {AuthContext} from "../Context/AuthContext";
+import React, {useState} from 'react';
+
 import {database} from "../firebase";
+import {signup} from "../redux/auth/AuthHelper";
+import {connect} from "react-redux";
 
 function Signup(props) {
+    let { signupUser} = props;
     const [email, setEmail]  = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
-    
-    let {signup} = useContext(AuthContext);
 
     const handleName = (e) => {
         setName(e.target.value);
@@ -20,18 +21,25 @@ function Signup(props) {
     }
     async function handleSignup (e){
         e.preventDefault();
-        let res = await signup(email, password);
-        let uid = res.user.uid;
-        
+        let currentUser = await signupUser(email, password);
+    
+        let uid = currentUser.uid;
+        console.log(email, name)
+        // console.log(currentUser);
         database.users.doc(uid).set({
             email,
             uid,
             name,
+            partnerProficiencies:[],
+            partnerSkills: [],
+            userSkills:[],
+            userProficiencies: [],
+            userTechStack: "",
+            partnerTechStack: "",
             createdAt: database.getUserTimeStamp(),
         })
-        props.push("/addskills")
-        // setLoader(false);
         // props.history.push("/");
+        props.history.push("/register")
     }
     return (
         <>
@@ -55,5 +63,12 @@ function Signup(props) {
         </>
     )
 }
-
-export default Signup;
+const mapStateToProps = (store) => {
+    return store.auth;
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signupUser: (email, password) => dispatch(signup(email, password))
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Signup);

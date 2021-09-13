@@ -8,6 +8,7 @@ function postReducer(state= initialState, action){
     switch(action.type){
         case 'SUCCESS_POSTS':
             return{
+                ...state,
                 posts: [...action.payload],
                 loading: false
             }
@@ -18,8 +19,7 @@ function postReducer(state= initialState, action){
                 error : action.payload
             }
         default : 
-        return state;
-        
+            return state;
     }
 }
 
