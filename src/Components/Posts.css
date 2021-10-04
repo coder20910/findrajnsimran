@@ -49,6 +49,7 @@
     width: 70px;
 }
 .interestContainer{
+    display: inline;
     text-align: center;
     padding-left: 15px;
 }
@@ -77,3 +78,35 @@
     cursor: pointer;
     text-decoration: underline;
 }
+h5{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  /* height: 20em; */
+}
+.skillsInDetails
+{ 
+    margin:0px;
+    padding-inline-start: 5px;
+}
+.interestContainermodal{
+    position: sticky;
+}
+.interseted-section-modal{
+    margin-left: 16.5%;
+}
+.interested-button-modal{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 6px 12px;
+    background-color: #02BFA0;
+    border: 0;
+    border-bottom: 3px solid #029A82;
+    color: white;
+    border-radius: 4px;
+    background-color: #19927A;
+    cursor: pointer;
+    /* background-color: #19927A; */
+}
+

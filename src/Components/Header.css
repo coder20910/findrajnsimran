@@ -1,0 +1,7 @@
+.header-container{
+    height: 50px;
+    margin-bottom: 28px;
+    z-index: 1090;
+    background-color: #4A5056;
+    position:fixed;
+}

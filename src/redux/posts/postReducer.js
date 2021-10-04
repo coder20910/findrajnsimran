@@ -8,7 +8,7 @@ function postReducer(state= initialState, action){
     switch(action.type){
         case 'SUCCESS_POSTS':
             return{
-                ...state,
+                error: "",
                 posts: [...action.payload],
                 loading: false
             }

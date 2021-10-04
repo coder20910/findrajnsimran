@@ -1,8 +1,9 @@
 import React, { useEffect} from 'react';
 import {connect} from "react-redux";
 import {getPostMiddleWare} from "../redux/posts/getPostMiddleWare";
-import Posts from './Posts';
 
+import Posts from './Posts';
+import Header from './Header';
 
 function Home(props) {
     let {fetchPosts} = props;  
@@ -10,7 +11,10 @@ function Home(props) {
         fetchPosts();
     }, [fetchPosts])
     return (
+        <>
+        <Header></Header>
         <Posts></Posts>
+        </>
     )
 }
 const mapDispatchToProps = (dispatch) => {

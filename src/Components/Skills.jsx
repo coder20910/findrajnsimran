@@ -203,7 +203,7 @@ function Skills(props) {
                     <div className="primary-skills" >
                         <ul className="tags">{
                             skills.map((skill, index) =>{
-                                return <li key={index}>
+                                return <li  key={index}>
                                     <button onClick={()=>handleSkill(skill)}>{skill}</button>
                                 </li>
                             })
@@ -235,9 +235,9 @@ function Skills(props) {
                                     <label htmlFor="proficiency"/>
                                     <select  name={i} className="profOpt" value={currProficiencyValue} onChange={handleinputSkillsAndProficiency} id="proficiency" >
                                         <option value={'0'} disabled>Select Proficiency</option>
-                                        <option value="1"  label="Beginner">Beginner</option>
-                                        <option value="2"  label="Intermediate">Intermediate</option>
-                                        <option value="3"  label="Expert">Expert</option>                                            
+                                        <option value="Beginner"  label="Beginner">Beginner</option>
+                                        <option value="Intermediate"  label="Intermediate">Intermediate</option>
+                                        <option value="Expert"  label="Expert">Expert</option>                                            
                                     </select>
                                     {error.profErr !== undefined
                                         ?
